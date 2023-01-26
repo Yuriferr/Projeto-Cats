@@ -6,6 +6,8 @@ app.use(cors())
 
 app.use(express.json())
 
+const port = process.env.PORT || 8000;
+
 const gatos = [
     {
         name: 'Merlin',
@@ -50,6 +52,6 @@ app.get('/cats' , (req, res) => {
 })
 
 
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log('servidor ligado')
 })
